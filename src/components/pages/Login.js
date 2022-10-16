@@ -11,6 +11,7 @@ function Login({ setPassword, password, isLogged = false }) {
         if (isLogged) {
             navigate('/');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isLogged]);
 
     return (
