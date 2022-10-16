@@ -1,15 +1,15 @@
 import Form from 'react-bootstrap/Form';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
-function Login({setPassword, password, isLogged}) {
+function Login({ setPassword, password, isLogged = false }) {
 
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         isLogged && navigate('/');
-      }, [isLogged]);
+    }, [isLogged]);
 
     return (
 
