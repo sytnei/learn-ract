@@ -8,7 +8,9 @@ function Login({ setPassword, password, isLogged = false }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        isLogged && navigate('/');
+        if (isLogged) {
+            navigate('/');
+        }
     }, [isLogged]);
 
     return (
