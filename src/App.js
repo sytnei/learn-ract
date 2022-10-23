@@ -2,6 +2,7 @@ import './App.css';
 import { useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
+import Header from './components/layout/Header';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
@@ -36,7 +37,7 @@ function App() {
         <header className="App-header">
           {/* <Test/>
             <Navbar/> */}
-          <Navigation 
+          <Header 
             isLogged={valid}
             setPassword={setPassword}
           />
@@ -47,7 +48,7 @@ function App() {
             <Route exact path='/' element={< Home />}></Route>
             <Route exact path='/about' element={< About />}></Route>
             <Route exact path='/contact' element={< Contact />}></Route>
-            {/* <Route exact path='/courses' element={< Courses />}></Route> */}
+            <Route exact path='/courses' element={< Courses />}></Route>
             <Route path="/courses" element={< Courses />} />
             <Route path="/courses/:courseId" element={< Courses />} />
             <Route exact path='/login' element={< Login setPassword={setPassword} password={password} valid={valid} />}></Route>
