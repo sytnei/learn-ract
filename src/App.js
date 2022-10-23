@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Courses from './components/pages/Courses';
+import Posts from './components/pages/Posts';
 import Login from './components/pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,6 +40,8 @@ const App = () => {
             <Route exact path='/contact' element={< Contact />}></Route>
             <Route path="/courses" element={< Courses />} ></Route>
             <Route path="/courses/:courseId" element={< Courses />} ></Route>
+            <Route path="/posts" element={< Posts />} ></Route>
+            <Route path="/posts/:postId" element={< Posts />} ></Route>
             <Route exact path='/login' element={< Login setPassword={setPassword} password={password} isLogged={isLogged} />}></Route>
           </Routes>
         </header>
