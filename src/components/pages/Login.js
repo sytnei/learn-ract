@@ -1,15 +1,18 @@
 import Form from 'react-bootstrap/Form';
-import {useState, useEffect} from 'react';
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
-function Login({setPassword, password, valid}) {
+function Login({ setPassword, password, isLogged = false }) {
 
     const navigate = useNavigate();
-    
+
     useEffect(() => {
-        valid && navigate('/');
-      }, [valid]);
+        if (isLogged) {
+            navigate('/');
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isLogged]);
 
     return (
 
@@ -18,7 +21,7 @@ function Login({setPassword, password, valid}) {
             width: 700,
             padding: 30
         }}>
-            <h4>My password is {password}, {valid ? 'is valid' : 'is invalid'}</h4>
+            <h4>My password is {password}, {isLogged ? 'is isLogged' : 'is inisLogged'}</h4>
             <Form>
                 <Form.Group>
                     <Form.Label>Enter your password:</Form.Label>

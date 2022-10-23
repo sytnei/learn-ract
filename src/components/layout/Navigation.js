@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Navigation({isLogged, setPassword}) {
+function Navigation({ isLogged, setIsLogged }) {
     return (
         <ul>
             <li>
@@ -16,13 +16,13 @@ function Navigation({isLogged, setPassword}) {
                 <Link to="/courses">Courses</Link>
             </li>
             {!isLogged && (
-            <li>
-                <Link to="/login">Login</Link>
-            </li>)}
+                <li>
+                    <Link to="/login">Login</Link>
+                </li>)}
             {isLogged && (
-            <li>
-                <Link to="#" onClick={()=>{setPassword('')}}>Log out</Link>
-            </li>)}
+                <li>
+                    <Link to="#" onClick={() => { setIsLogged(false) }}>Log out</Link>
+                </li>)}
         </ul>
     );
 }
