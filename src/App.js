@@ -9,6 +9,7 @@ import Courses from './components/pages/Courses';
 import Posts from './components/pages/Posts';
 import Login from './components/pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/css/App.css';
 
 import { useState, useEffect } from 'react';
 

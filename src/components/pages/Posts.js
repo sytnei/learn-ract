@@ -13,6 +13,7 @@ function Posts() {
 
     useEffect(() => {
         !postId && getPosts().then(resoults => setposts(resoults));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -31,13 +32,15 @@ function Posts() {
                                 <Link to={`/posts/${post.id}`}>{post.title.rendered}</Link>
                             </li>))}
                     </ul>
-                </>)}
+                </>
+            )}
 
-                {!!postId && (
+            {!!postId && !!post?.content?.rendered && (
                 <>
                     <h1>{post.title.rendered}</h1>
                     <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-                </>)}
+                </>
+            )}
 
         </>
 
