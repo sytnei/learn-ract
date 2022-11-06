@@ -1,5 +1,6 @@
-import './App.css';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
 import Navigation from './components/layout/Navigation';
 import Header from './components/layout/Header';
 import Home from './components/pages/Home';
@@ -9,7 +10,7 @@ import Courses from './components/pages/Courses';
 import Posts from './components/pages/Posts';
 import Login from './components/pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/css/App.css';
+import './App.scss';
 
 import { useState, useEffect } from 'react';
 
@@ -30,7 +31,7 @@ const App = () => {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Header 
+        <Header 
             isLogged={isLogged}
             setPassword={setPassword}
           />
