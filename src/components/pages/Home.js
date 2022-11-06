@@ -15,11 +15,11 @@ function Home() {
   return (
     <>
       <h1 className='pb-4'>Courses</h1>
-      <div className='container'>
+      <div className='container d-flex'>
         {!!courses.length && courses.filter(course => course.slug !== 'uncategorized').map(course => (
 
-          <Card style={{ width: '18rem' }} key={course.id}>
-            <Card.Img variant="top" src={course.acf.image.sizes.medium} />
+          <Card style={{ width: '18rem', margin: '0 1rem 1rem 0'}} key={course.id}>
+            <Card.Img variant="top" src={course.acf.image.sizes.medium} style={{margin: '1rem auto 1rem auto', maxWidth: '90%', maxHeight: '7rem', width: 'auto'}}/>
             <Card.Body>
               <Card.Title>{course.name}</Card.Title>
               <Card.Text>
