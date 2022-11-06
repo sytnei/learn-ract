@@ -5,9 +5,9 @@ import React from 'react';
 import Header from './components/layout/Header';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Contact from './components/pages/Contact';
-import Courses from './components/pages/Courses';
-import Posts from './components/pages/Posts';
+import Contact from './components/pages/Contact'; 
+import Course from './components/pages/Course';
+import Leason from './components/pages/Leason';
 import Login from './components/pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -37,13 +37,11 @@ const App = () => {
         <section className='section-main'>
           <Container>
             <Routes>
-              <Route exact path='/' element={< Home />}></Route>
-              <Route exact path='/about' element={< About />}></Route>
-              <Route exact path='/contact' element={< Contact />}></Route>
-              <Route path="/courses" element={< Courses />} ></Route>
-              <Route path="/courses/:courseId" element={< Courses />} ></Route>
-              <Route path="/posts" element={< Posts />} ></Route>
-              <Route path="/posts/:postId" element={< Posts />} ></Route>
+              <Route exact path='/' element={<Home />}></Route>
+              <Route exact path='/about' element={<About />}></Route>
+              <Route exact path='/contact' element={<Contact />}></Route>
+              <Route path="/course/:courseId" element={<Course />} ></Route>
+              <Route path="/leason/:courseId/:leasonId" element={<Leason />} ></Route>
               <Route exact path='/login' element={< Login setPassword={setPassword} password={password} isLogged={isLogged} />}></Route>
             </Routes>
           </Container>

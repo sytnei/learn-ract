@@ -13,18 +13,17 @@ function Header({ isLogged, setPassword }) {
                 <Navbar.Brand href="#home">
                     <img
                         alt=""
-                        src="/logo192.png"
-                        width="30"
-                        height="30"
+                        src="/learn-courses.png"
+                        width="40"
+                        height="40"
                         className="d-inline-block align-top"
                     />
                 </Navbar.Brand>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
+                    <Nav className="me-auto"> 
+                        <Nav.Link as={Link} to="/">Courses</Nav.Link>
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         <Nav.Link as={Link} to="/login">Login</Nav.Link>
