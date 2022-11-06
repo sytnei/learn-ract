@@ -36,12 +36,12 @@ function Posts() {
                 </>
             )}
 
-            {/* {!!postId && !!post?.content?.rendered && (
+             {!!postId && !!post?.content?.rendered && (
                 <>
                     <h1>{post.title.rendered}</h1>
                     <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                 </>
-            )} */}
+            )}
 
         </>
 
