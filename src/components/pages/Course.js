@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import getPosts from '../../services/getPosts';
-
+import { ListGroup } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 
 function Course() {
@@ -13,16 +13,27 @@ function Course() {
         getPosts().then(resoults => setposts(resoults));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
- 
+
     return (
         <>
             <h1>Leasons:</h1>
-            <ul>
+            <ListGroup>
                 {!!posts.length && posts.map(post => (
-                    <li key={post.id}>
-                        <Link to={`/leason/${courseId}/${post.id}`}>{post.title.rendered}</Link>
-                    </li>))}
-            </ul>
+
+                    <ListGroup.Item key={post.id} className='d-table' >
+
+                        <Link to={`/leason/${courseId}/${post.id}`}>
+                            <img
+                                alt=""
+                                src="/book-icon.png"
+                                width="18"
+                                height="18"
+                                className="d-inline-block align-left"
+                            />{post.title.rendered}
+                        </Link>
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
         </>
 
     );
