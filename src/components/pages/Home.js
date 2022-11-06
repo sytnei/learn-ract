@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import { useParams } from "react-router-dom"; 
 import Card from 'react-bootstrap/Card';
 import getCourses from '../../services/getCourses';
 
@@ -13,8 +12,7 @@ function Home() {
   useEffect(() => {
     getCourses().then(results => setCourses(results));
   }, []);
-
-  let { courseId } = useParams();
+ 
   return (
     <>
       <h1 className='pb-4'>Courses</h1>
