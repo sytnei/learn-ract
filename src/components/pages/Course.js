@@ -18,7 +18,7 @@ function Course() {
     return (
         <>
             <Breadcrumb>
-                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item linkProps={{ to: `/` }} linkAs={Link}>Home</Breadcrumb.Item>
                 <Breadcrumb.Item active>Leasons</Breadcrumb.Item>
             </Breadcrumb>
             <h1>Leasons:</h1>

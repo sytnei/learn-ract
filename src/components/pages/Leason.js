@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import getPost from '../../services/getPost';
 import { Breadcrumb } from 'react-bootstrap';
@@ -16,8 +17,8 @@ function Leason() {
     return (
         <>
             <Breadcrumb>
-                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                <Breadcrumb.Item href={`/course/${courseId}`}>
+                <Breadcrumb.Item linkProps={{ to: `/` }} linkAs={Link}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item linkProps={{ to: `/course/${courseId}` }} linkAs={Link} >
                     Leasons
                 </Breadcrumb.Item>
                 <Breadcrumb.Item active>{courseId}</Breadcrumb.Item>
