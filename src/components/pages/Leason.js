@@ -20,7 +20,7 @@ function Leason() {
                 <Breadcrumb.Item href={`/course/${courseId}`}>
                     Leasons
                 </Breadcrumb.Item>
-                <Breadcrumb.Item active>Leason</Breadcrumb.Item>
+                <Breadcrumb.Item active>{courseId}</Breadcrumb.Item>
             </Breadcrumb>
             {!!courseId && !!leasonId && !!leason?.content?.rendered && (
                 <>
