@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import getPosts from '../../services/getPosts';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { ListGroup } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import { Breadcrumb } from 'react-bootstrap';
 
 function Course() {
     const [posts, setposts] = useState([]);
@@ -17,23 +16,23 @@ function Course() {
 
     return (
         <>
-            <Breadcrumb>
-                <Breadcrumb.Item linkProps={{ to: `/` }} linkAs={Link}>Home</Breadcrumb.Item>
-                <Breadcrumb.Item active>Leasons</Breadcrumb.Item>
-            </Breadcrumb>
             <h1>Leasons:</h1>
-
             <ListGroup>
                 {!!posts.length && posts.map(post => (
-                    <ListGroup.Item key={post.id}>
+
+                    <ListGroup.Item key={post.id} className='d-table' >
+
                         <Link to={`/leason/${courseId}/${post.id}`}>
                             <img
                                 alt=""
-                                src="/lesson.png"
-                                width="20"
-                                height="20" className='me-4' />
-                            {post.title.rendered}</Link>
-                    </ListGroup.Item>))}
+                                src="/book-icon.png"
+                                width="18"
+                                height="18"
+                                className="d-inline-block align-left"
+                            />{post.title.rendered}
+                        </Link>
+                    </ListGroup.Item>
+                ))}
             </ListGroup>
         </>
 

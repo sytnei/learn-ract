@@ -9,11 +9,10 @@ import Contact from './components/pages/Contact';
 import Course from './components/pages/Course';
 import Leason from './components/pages/Leason';
 import Login from './components/pages/Login';
+import Footer from './components/layout/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-
 import { useState, useEffect } from 'react';
-import Footer from './components/layout/Footer';
 
 const App = () => {
 
