@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 import getPost from '../../services/getPost';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { useState, useEffect } from 'react';
 
 function Leason() {
