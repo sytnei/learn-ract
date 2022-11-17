@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import getPost from '../../services/getPost';
 import { useState, useEffect } from 'react';
 import { Breadcrumb } from 'react-bootstrap';
+import Steps from '../layout/Steps';
+
 
 function Leason() {
     const [leason, setLeason] = useState([]);
@@ -21,6 +23,9 @@ function Leason() {
                 </Breadcrumb.Item>
                 <Breadcrumb.Item active>{courseId}</Breadcrumb.Item>
             </Breadcrumb>
+            <Steps leasons={leason} />
+            
+            
 
             {!!courseId && !!leasonId && !!leason?.content?.rendered && (
                 <>

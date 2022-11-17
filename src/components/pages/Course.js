@@ -5,6 +5,7 @@ import getPosts from '../../services/getPosts';
 import { ListGroup, Breadcrumb } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 
+
 function Course() {
     const [posts, setposts] = useState([]);
     let { courseId } = useParams();
@@ -20,6 +21,7 @@ function Course() {
                 <Breadcrumb.Item linkProps={{ to: `/` }} linkAs={Link}>Home</Breadcrumb.Item>
                 <Breadcrumb.Item active>Leasons</Breadcrumb.Item>
             </Breadcrumb>
+           
             <h1>Leasons:</h1>
             <ListGroup>
                 {!!posts.length && posts.map(post => (
