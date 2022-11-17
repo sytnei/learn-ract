@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import getPosts from '../../services/getPosts';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, Breadcrumb } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 
 function Course() {
@@ -16,6 +16,10 @@ function Course() {
 
     return (
         <>
+            <Breadcrumb>
+                <Breadcrumb.Item linkProps={{ to: `/` }} linkAs={Link}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item active>Leasons</Breadcrumb.Item>
+            </Breadcrumb>
             <h1>Leasons:</h1>
             <ListGroup>
                 {!!posts.length && posts.map(post => (
@@ -28,7 +32,7 @@ function Course() {
                                 src="/book-icon.png"
                                 width="18"
                                 height="18"
-                                className="d-inline-block align-left"
+                                className="d-inline-block align-left me-2"
                             />{post.title.rendered}
                         </Link>
                     </ListGroup.Item>

@@ -23,7 +23,7 @@ function Home() {
   
   return (
     <>
-      <Form>
+      <Form className='pb-3'>
         <Form.Group>
           <Form.Control type="text"
             onChange={(e) => {
@@ -33,7 +33,7 @@ function Home() {
         </Form.Group>
       </Form>
 
-      <ListGroup>
+      <ListGroup className='mb-2'>
         {!!searchText.length && searchResults.map(result => (
 
           <ListGroup.Item key={result.id} className='d-table' >
@@ -44,7 +44,7 @@ function Home() {
                 src="/book-icon.png"
                 width="18"
                 height="18"
-                className="d-inline-block align-left"
+                className="d-inline-block align-left me-2"
               />{result.title}
             </Link>
           </ListGroup.Item>
