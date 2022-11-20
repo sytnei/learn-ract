@@ -27,6 +27,7 @@ function Header({ isLogged, setPassword }) {
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        <Nav.Link as={Link} to="/registration">Register</Nav.Link>
                         {isLogged && (
                             <Nav.Link to="#" onClick={() => { setPassword('') }}>Log out</Nav.Link>
                         )}

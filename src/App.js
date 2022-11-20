@@ -9,6 +9,7 @@ import Contact from './components/pages/Contact';
 import Course from './components/pages/Course';
 import Leason from './components/pages/Leason';
 import Login from './components/pages/Login';
+import Registration from './components/pages/Registration';
 import Footer from './components/layout/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -43,6 +44,7 @@ const App = () => {
               <Route path="/course/:courseId" element={<Course />} ></Route>
               <Route path="/leason/:courseId/:leasonId" element={<Leason />} ></Route>
               <Route exact path='/login' element={< Login setPassword={setPassword} password={password} isLogged={isLogged} />}></Route>
+              <Route exact path='/registration' element={< Registration />}></Route>
             </Routes>
           </Container>
         </section>
