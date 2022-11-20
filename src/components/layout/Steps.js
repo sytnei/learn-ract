@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 function Steps() {
   const [posts, setposts] = useState([]);
+  let { leasonId } = useParams();
 
   useEffect(() => {
     getPosts().then(resoults => setposts(resoults));
