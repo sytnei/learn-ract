@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 
 function Steps() {
   const [posts, setposts] = useState([]);
-  let { courseId, leasonId } = useParams();
 
   useEffect(() => {
     getPosts().then(resoults => setposts(resoults));
@@ -26,5 +25,5 @@ function Steps() {
     </div>
   )
 }
- 
+
 export default Steps;
