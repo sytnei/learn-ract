@@ -62,7 +62,7 @@ function Home() {
               <Card.Text>
                 {course.description}
               </Card.Text>
-              <Link to={`/course/${course.slug}`} className="btn btn-secondary btn-md">
+              <Link to={`/course/${course.slug}-${course.id}`} className="btn btn-secondary btn-md">
                 Read more
               </Link>
             </Card.Body>
