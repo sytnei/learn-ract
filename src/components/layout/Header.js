@@ -18,35 +18,7 @@ function Header({ isLogged, setPassword }) {
     }, []);
 
     return (
-
-        // <Navbar bg="light" expand="lg">
-        //     <Container>
-        //         <Navbar.Brand href="#home">
-        //             <img
-        //                 alt=""
-        //                 src="/learn-courses.png"
-        //                 width="40"
-        //                 height="40"
-        //                 className="d-inline-block align-top"
-        //             />
-        //         </Navbar.Brand>
-
-        //         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        //         <Navbar.Collapse id="basic-navbar-nav">
-        //             <Nav className="me-auto"> 
-        //                 <Nav.Link as={Link} to="/">Courses</Nav.Link>
-        //                 <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-        //                 <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-        //                 <Nav.Link as={Link} to="/login">Login</Nav.Link>
-        //                 {isLogged && (
-        //                     <Nav.Link to="#" onClick={() => { setPassword('') }}>Log out</Nav.Link>
-        //                 )}
-        //             </Nav>
-        //         </Navbar.Collapse>
-        //     </Container>
-        // </Navbar>
-
-        
+ 
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">
@@ -62,12 +34,12 @@ function Header({ isLogged, setPassword }) {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto"> 
-                        {!!navigation.items.length && navigation.items.map(item => (
-                            <Nav.Link as={Link} to={`${item.url}`}>{item.title}</Nav.Link>
-                        ))}
-                        {isLogged && (
-                            <Nav.Link to="#" onClick={() => { setPassword('') }}>Log out</Nav.Link>
-                        )}
+                            {!!navigation?.items?.length && navigation?.items?.map(item => (
+                                <Nav.Link as={Link} to={`${item.url}`}>{item.title}</Nav.Link>
+                            ))}
+                            {isLogged && (
+                                <Nav.Link to="#" onClick={() => { setPassword('') }}>Log out</Nav.Link>
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
